@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myText = (TextView) findViewById(R.id.myResult);
+        myImage = (ImageView) findViewById(R.id.imgres);
         myConManager = (ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);
         myInfo=myConManager.getActiveNetworkInfo();
 
@@ -34,5 +36,12 @@ public class MainActivity extends AppCompatActivity {
         c1.execute("http://www.google.com");
 
 
+    }
+
+    public void doSomething1(View view) {
+        if(myInfo !=null && myInfo.isConnected()){
+            downloadimg = new DownloadImageTask();
+            downloadimg.execute("https://www.amrita.edu/sites/default/");
+        }
     }
 }

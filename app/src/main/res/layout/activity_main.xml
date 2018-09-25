@@ -32,4 +32,33 @@
             android:textAlignment="center" />
     </ScrollView>
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="28dp"
+        android:onClick="doSomething1"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/imgres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrol" />
+
+    <ImageView
+        android:id="@+id/imgres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="66dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
 </android.support.constraint.ConstraintLayout>
